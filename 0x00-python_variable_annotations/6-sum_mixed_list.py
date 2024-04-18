@@ -1,16 +1,12 @@
 #!/usr/bin/env python3
 """
-Module with a type-annotated function make_multiplier.
+Complex types - mixed list
 """
+from typing import List, Union
 
 
-from typing import Callable
-
-
-def make_multiplier(multiplier: float) -> Callable[[float], float]:
+def sum_mixed_list(mxd_lst: List[Union[int, float]]) -> float:
     """
-    Return a function that multiplies a float by the given multiplier.
+    return a sum of all nums inside a list
     """
-    def multiplier_function(x: float) -> float:
-        return x * multiplier
-    return multiplier_function
+    return sum(mxd_lst)
